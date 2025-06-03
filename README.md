@@ -14,5 +14,5 @@ This application serves as a testament to practical front-end development skills
 
 # Key Features : Creates by using HTML, and CSS. Fully Responsive. Animated Modern Design.
 
-I'm glad to do Internship with MotionCut and giving me this opportunity to show my creative skills.
+I'm glad to do Internship with Brainwave Matrix Solutions and giving me this opportunity to show my creative skills.
 # Thankyou Brainwave Matrix Solutions
