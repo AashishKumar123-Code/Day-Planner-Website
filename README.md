@@ -1,5 +1,5 @@
-#Daily Planner Website 
-#Brainwave Matrix Solutions Internship Project
+# Daily Planner Website 
+# Brainwave Matrix Solutions Internship Project
 Author - Aashish Kumar
 
 This project is a minimalist daily planner application, meticulously crafted using HTML, CSS, and JavaScript. It represents a significant learning outcome from my web development internship at Brainwave Matrix Solutions. Through its development, I focused on:
