@@ -1,0 +1,459 @@
+/* Basic CSS Reset for consistent rendering */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Body and Font Styling */
+body {
+    font-family: 'Inter', sans-serif; /* Using a common sans-serif fallback as Inter isn't linked */
+    background-color: #f0f4f8; /* Light blue-gray background */
+    display: flex;
+    flex-direction: column; /* Changed to column for header/footer positioning */
+    align-items: center;
+    justify-content: space-between; /* Distribute space between header, main, footer */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Site Header Styling */
+.site-header {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.site-header h1 {
+    font-size: 2.5rem; /* Equivalent to text-4xl */
+    font-weight: 800; /* Equivalent to font-extrabold */
+    color: #1a202c; /* Equivalent to gray-800 */
+}
+
+/* Main Content Container */
+.main-content {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: 100%;
+    max-width: 480px; /* Max width for better readability on large screens */
+    border: 1px solid #e2e8f0; /* Light border */
+    box-sizing: border-box;
+    display: flex; /* Use flexbox for internal sections */
+    flex-direction: column;
+    gap: 24px; /* Space between sections */
+}
+
+/* Date Navigation */
+.date-nav-section {
+    width: 100%;
+}
+
+.date-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e0f2fe; /* Equivalent to blue-50 */
+    border-radius: 8px; /* Equivalent to rounded-lg */
+    padding: 12px; /* Equivalent to p-3 */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06); /* Equivalent to shadow-inner */
+}
+
+.date-nav button {
+    padding: 8px; /* Equivalent to p-2 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    background-color: #3b82f6; /* Equivalent to blue-500 */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.date-nav button:hover {
+    background-color: #2563eb; /* Equivalent to blue-600 */
+    transform: scale(1.05);
+}
+
+.date-nav button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5); /* Equivalent to focus:ring-2 focus:ring-blue-400 */
+}
+
+#currentDateDisplay {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: 600; /* Equivalent to font-semibold */
+    color: #1e40af; /* Equivalent to blue-800 */
+}
+
+/* Add Task Form */
+.add-task-section {
+    width: 100%;
+}
+
+.add-task-form {
+    padding: 16px; /* Equivalent to p-4 */
+    background-color: #f9fafb; /* Equivalent to gray-50 */
+    border-radius: 8px; /* Equivalent to rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-md */
+}
+
+.form-group {
+    margin-bottom: 16px; /* Equivalent to mb-4 */
+}
+
+.form-group label {
+    display: block;
+    color: #374151; /* Equivalent to gray-700 */
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    font-weight: 500; /* Equivalent to font-medium */
+    margin-bottom: 8px; /* Equivalent to mb-2 */
+}
+
+.form-group input {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Equivalent to shadow-sm */
+    appearance: none;
+    border: 1px solid #d1d5db; /* Equivalent to border */
+    border-radius: 8px; /* Equivalent to rounded-lg */
+    width: 100%;
+    padding: 8px 12px; /* Equivalent to py-2 px-3 */
+    color: #374151; /* Equivalent to gray-700 */
+    line-height: 1.5; /* Equivalent to leading-tight */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5); /* Equivalent to focus:ring-2 focus:ring-blue-400 */
+}
+
+.add-task-form button[type="submit"] {
+    width: 100%;
+    background-color: #22c55e; /* Equivalent to green-500 */
+    color: #ffffff;
+    font-weight: 700; /* Equivalent to font-bold */
+    padding: 8px 16px; /* Equivalent to py-2 px-4 */
+    border-radius: 8px; /* Equivalent to rounded-lg */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-lg */
+}
+
+.add-task-form button[type="submit"]:hover {
+    background-color: #16a34a; /* Equivalent to green-600 */
+    transform: translateY(-2px);
+}
+
+.add-task-form button[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.5); /* Equivalent to focus:ring-2 focus:ring-green-400 */
+}
+
+/* Task List */
+.task-list-section {
+    width: 100%;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Equivalent to space-y-4 */
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px; /* Equivalent to p-4 */
+    background-color: #ffffff;
+    border-radius: 8px; /* Equivalent to rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Equivalent to shadow-md */
+    border: 1px solid #f3f4f6; /* Equivalent to border-gray-100 */
+    transition: all 0.2s ease;
+}
+
+.task-item.completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+    color: #6b7280; /* Equivalent to gray-500 */
+    background-color: #ecfdf5; /* Equivalent to green-50 */
+}
+
+.task-item .task-content {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.task-item input[type="checkbox"] {
+    width: 20px; /* Equivalent to h-5 w-5 */
+    height: 20px;
+    border-radius: 4px; /* Equivalent to rounded-md */
+    border: 1px solid #d1d5db; /* Equivalent to border-gray-300 */
+    margin-right: 12px; /* Equivalent to mr-3 */
+    cursor: pointer;
+    accent-color: #3b82f6; /* Equivalent to text-blue-600 */
+    transition: all 0.2s ease;
+}
+
+.task-item input[type="checkbox"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Equivalent to focus:ring-blue-500 */
+}
+
+.task-item .task-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows description to take available space */
+}
+
+.task-item .task-time {
+    font-size: 0.875rem; /* Equivalent to text-sm */
+    font-weight: 500; /* Equivalent to font-medium */
+    color: #4b5563; /* Equivalent to gray-600 */
+}
+
+.task-item .task-description {
+    font-size: 1.125rem; /* Equivalent to text-lg */
+    font-weight: 600; /* Equivalent to font-semibold */
+    word-break: break-word; /* Ensures long descriptions wrap */
+}
+
+.task-item .task-actions {
+    display: flex;
+    gap: 8px; /* Equivalent to space-x-2 */
+    margin-left: 16px; /* Equivalent to ml-4 */
+}
+
+.task-item .task-actions button {
+    padding: 8px; /* Equivalent to p-2 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+.task-item .task-actions .edit-btn {
+    background-color: #fef3c7; /* Equivalent to yellow-100 */
+    color: #b45309; /* Equivalent to yellow-700 */
+}
+
+.task-item .task-actions .edit-btn:hover {
+    background-color: #fde68a; /* Equivalent to yellow-200 */
+    transform: scale(1.05);
+}
+
+.task-item .task-actions .edit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.5); /* Equivalent to focus:ring-yellow-400 */
+}
+
+.task-item .task-actions .delete-btn {
+    background-color: #fee2e2; /* Equivalent to red-100 */
+    color: #b91c1c; /* Equivalent to red-700 */
+}
+
+.task-item .task-actions .delete-btn:hover {
+    background-color: #fecaca; /* Equivalent to red-200 */
+    transform: scale(1.05);
+}
+
+.task-item .task-actions .delete-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(252, 165, 165, 0.5); /* Equivalent to focus:ring-red-400 */
+}
+
+.no-tasks-message {
+    text-align: center;
+    color: #6b7280; /* Equivalent to gray-500 */
+    margin-top: 20px;
+}
+
+/* Site Footer Styling */
+.site-footer {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Custom Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0; /* Equivalent to inset-0 */
+    background-color: rgba(31, 41, 55, 0.75); /* Equivalent to bg-gray-800 bg-opacity-75 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 15px; /* Equivalent to rounded-xl */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-2xl */
+    padding: 24px; /* Equivalent to p-6 */
+    width: 100%;
+    max-width: 400px; /* Equivalent to max-w-sm */
+    margin: auto;
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-title {
+    font-size: 1.25rem; /* Equivalent to text-xl */
+    font-weight: 700; /* Equivalent to font-bold */
+    color: #1a202c; /* Equivalent to gray-800 */
+    margin-bottom: 16px; /* Equivalent to mb-4 */
+}
+
+.modal-message {
+    color: #374151; /* Equivalent to gray-700 */
+    margin-bottom: 24px; /* Equivalent to mb-6 */
+}
+
+.modal-input-group {
+    margin-bottom: 24px; /* Equivalent to mb-6 */
+}
+
+.modal-input-group label {
+    display: block;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.modal-input-group input {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    width: 100%;
+    padding: 8px 12px;
+    color: #374151;
+    line-height: 1.5;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-input-group input:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5);
+}
+
+.modal-input-group input:not(:last-child) {
+    margin-bottom: 16px; /* Equivalent to mb-4 */
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px; /* Equivalent to space-x-4 */
+}
+
+.modal-actions button {
+    padding: 8px 16px; /* Equivalent to px-4 py-2 */
+    border-radius: 8px; /* Equivalent to rounded-lg */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-actions .cancel-btn {
+    background-color: #e5e7eb; /* Equivalent to gray-200 */
+    color: #374151; /* Equivalent to gray-700 */
+}
+
+.modal-actions .cancel-btn:hover {
+    background-color: #d1d5db; /* Equivalent to gray-300 */
+}
+
+.modal-actions .cancel-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(156, 163, 175, 0.5); /* Equivalent to focus:ring-gray-400 */
+}
+
+.modal-actions .confirm-btn {
+    background-color: #3b82f6; /* Equivalent to blue-500 */
+    color: #ffffff;
+}
+
+.modal-actions .confirm-btn:hover {
+    background-color: #2563eb; /* Equivalent to blue-600 */
+}
+
+.modal-actions .confirm-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.5); /* Equivalent to focus:ring-blue-400 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+
+    .site-header h1 {
+        font-size: 2rem;
+    }
+
+    .date-nav {
+        padding: 10px;
+    }
+
+    #currentDateDisplay {
+        font-size: 1rem;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .task-item .task-content {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-item .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+        margin-left: 0;
+    }
+
+    .modal-content {
+        padding: 20px;
+    }
+}
