@@ -1,7 +1,9 @@
-
 # Brainwave Matrix Solutions 
+
 # Web Development Internship Project
-I have comleted my 1st project of:
+
+I have completed my 1st project of:
+
 # Daily Planner Website 
 Author - Aashish Kumar
 
@@ -15,4 +17,5 @@ This application serves as a testament to practical front-end development skills
 # Key Features : Creates by using HTML, and CSS. Fully Responsive. Animated Modern Design.
 
 I'm glad to do Internship with Brainwave Matrix Solutions and giving me this opportunity to show my creative skills.
+
 # Thankyou Brainwave Matrix Solutions
